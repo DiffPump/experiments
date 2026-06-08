@@ -64,7 +64,7 @@ module load StdEnv/2023 cmake gcc boost
 |---|---|
 | Python ≥ 3.10 | |
 | One of: Gurobi ≥ 10 **or** SCIP ≥ 9 | must be installed and licensed |
-| Internet access | first run only, to install diffpump from PyPI |
+| `diffpump` source tree | installed locally with `pip install -e` |
 
 On **Compute Canada**:
 
@@ -211,10 +211,10 @@ The default configuration (`fp.cfg`) sets:
 - `numThreads = 1` (single-threaded)
 - `seed = 0`
 
-When the run finishes, `run.sh` prints a summary:
+When the run finishes, `run.sh` prints a summary line:
 
 ```
-Done — solved: 612  failed: 239  total: 851
+Done — solved: X  failed: Y  total: 851
 Logs: /path/to/fp_logs
 ```
 
@@ -543,8 +543,8 @@ that directly matches the layout of Table 2 in the paper:
 ```
 Variant   Fail%    Iters  Restart%  AvgTime(s)
 -----------------------------------------------
-FP        20.21     9842      8.12       3.821
-DP1       18.33     8901      7.44       3.512
+FP        ...       ...      ...        ...
+DP1       ...       ...      ...        ...
 ...
 ```
 
